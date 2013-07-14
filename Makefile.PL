@@ -20,14 +20,14 @@ my %WriteMakefileArgs = (
   "LICENSE" => "artistic_2",
   "NAME" => "EPublisher::Target::Plugin::OTRSDoc",
   "PREREQ_PM" => {
-    "EPublisher" => "0.6",
+    "EPublisher" => "0.7",
     "File::Basename" => 2,
     "File::Path" => "2.08",
     "HTML::Template::Compiled" => 0,
     "Pod::Simple::XHTML" => "3.14"
   },
   "TEST_REQUIRES" => {},
-  "VERSION" => "0.2",
+  "VERSION" => "0.3",
   "test" => {
     "TESTS" => "t/*.t"
   }

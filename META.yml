@@ -13,9 +13,9 @@ meta-spec:
   version: 1.4
 name: EPublisher-Target-Plugin-OTRSDoc
 requires:
-  EPublisher: 0.6
+  EPublisher: 0.7
   File::Basename: 2
   File::Path: 2.08
   HTML::Template::Compiled: 0
   Pod::Simple::XHTML: 3.14
-version: 0.2
+version: 0.3

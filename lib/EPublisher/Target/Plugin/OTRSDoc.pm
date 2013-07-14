@@ -13,7 +13,7 @@ use EPublisher;
 use EPublisher::Target::Base;
 our @ISA = qw(EPublisher::Target::Base);
 
-our $VERSION = 0.2;
+our $VERSION = 0.3;
 
 sub deploy {
     my ($self) = @_;
@@ -50,7 +50,7 @@ sub deploy {
             Body => $xhtml,
         );
         
-        if ( open my $fh, '>', File::Spec->catfile( $output, $name . '.html' ) ) {
+        if ( open my $fh, '>', File::Spec->catfile( $output, lc $name . '.html' ) ) {
             print $fh $tmpl->output;
             close $fh;
         }
@@ -148,7 +148,7 @@ EPublisher::Target::Plugin::OTRSDoc - Create HTML version of OTRS documentation
 
 =head1 VERSION
 
-version 0.2
+version 0.3
 
 =head1 SYNOPSIS
 
