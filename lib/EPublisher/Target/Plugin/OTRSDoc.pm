@@ -13,7 +13,7 @@ use EPublisher;
 use EPublisher::Target::Base;
 our @ISA = qw(EPublisher::Target::Base);
 
-our $VERSION = 0.3;
+our $VERSION = 0.4;
 
 sub deploy {
     my ($self) = @_;
@@ -44,6 +44,9 @@ sub deploy {
         my $tmpl = HTML::Template::Compiled->new(
             filename => $self->_config->{template},
         );
+        
+        $xhtml =~ s{</body>}{};
+        $xhtml =~ s{</html>}{};
         
         $tmpl->param(
             TOC  => \@TOC,
@@ -148,7 +151,7 @@ EPublisher::Target::Plugin::OTRSDoc - Create HTML version of OTRS documentation
 
 =head1 VERSION
 
-version 0.3
+version 0.4
 
 =head1 SYNOPSIS
 
